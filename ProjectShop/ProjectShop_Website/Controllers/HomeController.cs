@@ -26,5 +26,21 @@ namespace ProjectShop_Website.Controllers
 
             return View();
         }
+
+        public ActionResult Logon() 
+        {
+            ViewBag.Message = "Your logon page.";
+
+            return View();
+        }
+
+        public ActionResult Create()
+        {
+            ViewBag.Message = "Your create page.";
+
+            return View();
+        }
+
+
     }
 }
