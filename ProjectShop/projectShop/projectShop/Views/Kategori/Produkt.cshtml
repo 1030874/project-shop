@@ -1,0 +1,47 @@
+﻿@model IEnumerable<projectShop.Models.Product>
+
+@{
+    ViewBag.Title = "Produkt";
+}
+<!-- Title -->
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Produkt</h3>
+    </div>
+</div>
+
+
+
+<div class="row text-center">
+
+    @foreach (var item in Model)
+    {
+
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                @*<img src="@Url.Content("~/Images/" + item.product_image)" />*@
+
+                <div class="caption">
+                    <h3>@Html.DisplayFor(modelItem => item.product_name)</h3>
+
+
+
+                    @*<p>@Html.DisplayFor(modelItem => item.product_description)</p>*@
+                    <p>
+                        @Html.ActionLink("Se produktet", "ViewProduct", "Home", new { id = item.id }, new { @class = "btn btn-default" })
+
+                        @*<a href="#" class="btn btn-default">Se produkt</a>*@
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    }
+
+
+
+
+
+</div>

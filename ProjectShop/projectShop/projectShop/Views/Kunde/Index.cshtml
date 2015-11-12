@@ -1,0 +1,61 @@
+﻿@model IEnumerable<projectShop.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Kunde liste</h2>
+
+<p>
+
+
+
+
+    @Html.ActionLink("Tilbage", "Start", "Admin")
+
+
+
+
+</p>
+
+<table class="table">
+  
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_fn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_lf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cus_phone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_fn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_lf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cus_phone)
+        </td>
+        <td>
+            @Html.ActionLink("Rediger", "Edit", new { id=item.cus_id }) |
+            @Html.ActionLink("Detaljer", "Details", new { id=item.cus_id }) |
+            @Html.ActionLink("Slet", "Delete", new { id=item.cus_id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,50 @@
+﻿@model projectShop.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cus_fn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cus_fn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cus_lf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cus_lf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cus_mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cus_mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cus_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cus_phone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cus_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

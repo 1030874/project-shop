@@ -1,0 +1,32 @@
+﻿@model projectShop.Models.Product
+@{
+    ViewBag.Title = "ViewProduct";
+}
+
+<h2>@Model.product_name</h2>
+
+
+<div class="col-md-3 col-sm-6 hero-feature">
+    <div class="thumbnail">
+        <img src="http://placehold.it/800x500" alt="">
+
+        <div class="caption">
+            <h3>@Html.DisplayFor(modelItem => @Model.product_name)</h3>
+
+
+
+            <p>@Html.DisplayFor(modelItem => @Model.product_description)</p>
+            <p>
+
+                <a href="#" class="btn btn-default">Læg i kurv</a>
+
+
+
+
+
+
+            </p>
+        </div>
+    </div>
+</div>
+

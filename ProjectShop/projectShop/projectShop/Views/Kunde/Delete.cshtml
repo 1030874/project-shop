@@ -1,0 +1,56 @@
+﻿@model projectShop.Models.Customer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cus_fn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cus_fn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cus_lf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cus_lf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cus_mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cus_mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cus_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cus_phone)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Slet" class="btn btn-default" /> |
+            @Html.ActionLink("Tilbage", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,45 @@
+﻿@section scripts
+{
+    @Scripts.Render("~/bundles/app")
+}
+
+
+
+
+<h2>Reklame API</h2>
+
+
+<div>
+    @Html.ActionLink("Tilbage", "Start", "Admin")
+</div>
+
+<br />
+
+<div class="row">
+
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Reklamer</h2>
+            </div>
+            <div class="panel-body">
+                <ul class="list-unstyled" data-bind="foreach: adwords">
+                    <li>
+                        <strong>
+                            <span data-bind="text: Name">
+                            </span>
+                        </strong>:
+                        <span data-bind="text: Url"></span>
+
+                        
+
+                        <span data-bind="text: Image"></span>
+                        @*<small><a href="#" data-bind="click: $parent">Details</a></small>*@
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
+    </div>
+
+</div>
