@@ -11,13 +11,25 @@ namespace projectShop.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Customer
     {
+
+
         public int cus_id { get; set; }
+        [Required]
+        [DisplayName("Fornavn")]
         public string cus_fn { get; set; }
+        [Required]
+        [DisplayName("Efternavn")]
         public string cus_lf { get; set; }
+        [Required]
+        [DisplayName("E-mail")]
         public string cus_mail { get; set; }
+        [Required]
+        [DisplayName("Telefon")]
         public Nullable<int> cus_phone { get; set; }
     }
 }

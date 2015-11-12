@@ -11,15 +11,28 @@ namespace projectShop.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Product
     {
         public int id { get; set; }
+    
         public Nullable<int> product_id { get; set; }
+        [Required]
+        [DisplayName("Produkt navn")]
         public string product_name { get; set; }
+        [Required]
+        [DisplayName("Produkt pris")]
         public Nullable<int> product_price { get; set; }
+        [Required]
+        [DisplayName("Prudukt beskrivelse")]
         public string product_description { get; set; }
+ 
+        [DisplayName("Produkt billede")]
         public string product_image { get; set; }
+        [Required]
+        [DisplayName("Produkt kategori")]
         public Nullable<int> product_category { get; set; }
     }
 }
